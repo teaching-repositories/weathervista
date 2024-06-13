@@ -31,6 +31,14 @@ def convert_temperature(kelvin):
 
     Returns:
         float: Temperature in Celsius.
+
+    Examples:
+    >>> convert_temperature(273.15)
+    0.0
+    >>> convert_temperature(0)
+    -273.15
+    >>> convert_temperature(373.15)
+    100.0
     """
     celsius = kelvin - 273.15
     return celsius

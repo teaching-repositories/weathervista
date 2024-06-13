@@ -17,7 +17,7 @@ def update_weather(city_var, plot_frame):
         plot_frame (ttk.Frame): A Tkinter frame where the plots will be displayed.
     """
     city = city_var.get()
-    api_key = 'd0de46031ad7410d0c72c6063690e1d0'  # Replace with your OpenWeatherMap API key
+    api_key = 'bae42c96357151336d517d332313285c'  # Replace with your OpenWeatherMap API key
     current_data, forecast_data = fetch_weather_data(api_key, city)
     current_df, hourly_df, daily_df = process_weather_data(current_data, forecast_data)
     daily_df['Weather'] = daily_df.apply(determine_weather, axis=1, args=(25, 15, 80))
